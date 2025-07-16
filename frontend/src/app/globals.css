@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --radius: 0.625rem;
+  --background: #000;
+  --foreground: #fff;
+  --color-neutral-950: oklch(14.5% 0 0);
+}
+@theme inline {
+  /* Configure your theme variables here */
+  --font-display: "Inter", "sans-serif";
+  --color-primary-500: oklch(0.84 0.18 117.33);
+  --spacing: 0.25rem;
+}
+
+body {
+  @apply bg-black text-white;
+  background-color: var(--color-neutral-950);
+}
