@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingNavDemo } from "@/components/ui/mainFloatingNavbar";
+import { ContainerTextFlipDemo } from "@/components/ui/mainContainerTextFlip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <FloatingNavDemo/>
+        <FloatingNavDemo />
+        <div className="flex align-center justify-center mt-35">
+          <ContainerTextFlipDemo />
+        </div>
+
       </body>
     </html>
   );

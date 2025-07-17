@@ -12,13 +12,12 @@ export function GlareCardDemo() {
                 <p className="font-normal text-base text-neutral-200 mt-4">
                     Booking for Chauvihar should be informed in advance before 2pm.
                 </p>
-                <Button onClick={()=>router.push("/chaturmas")} text={"Book Now"}/>
+                <Button onClick={()=>router.push("/book")} text={"Book Now"}/>
             </GlareCard>
             <GlareCard className="flex flex-col items-start justify-end py-8 px-6 gap-4">
-                <p className="font-bold text-white text-lg">Tapascharya</p>
+                <p className="font-bold text-white text-lg">Chaturmas Highlights</p>
                 <p className="font-normal text-base text-neutral-200 mt-4">
-                    The greatest trick the devil ever pulled was to convince the world
-                    that he didn&apos;t exist.
+                    Highlihgts of all the chaturmas.
                 </p>
                 <Button onClick={()=>router.push("/chaturmas")} text={"See More"}/>
             </GlareCard>
