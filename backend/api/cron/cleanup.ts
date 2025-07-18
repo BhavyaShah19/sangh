@@ -1,6 +1,7 @@
+import { Request, Response } from 'express';
 import cleanUp from '../../src/cron/cleanup'
 
-export default async function handler(req, res) {
+export default async function handler(req:Request, res:Response) {
     try {
         await cleanUp();
         res.status(200).json({ success: true });
