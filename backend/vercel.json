@@ -13,7 +13,11 @@
     "routes": [
       { "src": "/api/cron/cleanup", "dest": "api/cron/cleanup.ts" },
       { "src": "/api/v1/booking", "dest": "api/index.ts" },
-      { "src": "/api/v1/bookingBasedOnCategory", "dest": "api/index.ts" }
+      { "src": "/api/v1/bookingBasedOnCategory", "dest": "api/index.ts" },
+      {
+        "src": "/ping",
+        "dest": "api/index.ts"
+      }
     ]
   }
   

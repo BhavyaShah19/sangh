@@ -83,7 +83,7 @@ app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
 });
 
-app.get('/ping', (req, res) => res.send('pong'));
+app.get('/api/ping', (req, res) => res.send('pong'));
 
 // app.listen(3001, () => {
 //     console.log("Server is running on port 3001")
