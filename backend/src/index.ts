@@ -67,22 +67,6 @@ app.get("/api/v1/bookingBasedOnCategory", async (req, res) => {
     }
 })
 
-// app.delete('/api/v1/booking/:id',async(req,res)=>{
-//     const id=req.params.id
-//     try {
-//         const deleteBooking=await prisma.boookingDetails.delete({
-//             where:{
-//                 id:id
-//             }
-//         })
-//         res.status(200).json(deleteBooking)
-//     } catch (error) {
-//         res.status(500).json({
-//             message: "Try again later",
-//             error: error,
-//         })
-//     }
-// })
 
 
 app.listen(3001, () => {
