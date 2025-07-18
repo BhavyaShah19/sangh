@@ -9,12 +9,16 @@ const prisma = new PrismaClient();
 
 const app = express();
 
-app.use(cors({
+const corsOptions = {
   origin: 'https://mahavirnagar-jain-sangh.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
-}));
-app.options('*', cors());
+};
+
+app.use(cors(corsOptions));
+app.options('/*', cors(corsOptions)); // Handles preflight for all routes
+
 app.use(express.json());
 
 app.post("/api/v1/booking", async (req, res) => {
@@ -78,6 +82,8 @@ app.get("/api/v1/bookingBasedOnCategory", async (req, res) => {
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
 });
+
+app.get('/ping', (req, res) => res.send('pong'));
 
 // app.listen(3001, () => {
 //     console.log("Server is running on port 3001")
