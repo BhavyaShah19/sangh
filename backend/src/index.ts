@@ -8,12 +8,13 @@ import "./cron/cleanup";
 const prisma = new PrismaClient();
 
 const app = express();
+
 app.use(cors({
   origin: 'https://mahavirnagar-jain-sangh.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
-
+app.options('*', cors());
 app.use(express.json());
 
 app.post("/api/v1/booking", async (req, res) => {
