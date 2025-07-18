@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "crons": [
+        {
+            "path": "/api/cron/cleanup",
+            "schedule": "00 13 * * *"
+        }
+    ],
+    "builds": [
+        {
+            "src": "api/index.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/api/index.js"
+        }
+    ]
+}
