@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 import { bookingDetailsSchema } from "./types";
 import cors from "cors";
 
-import "./cron/cleanup";
+// import "./cron/cleanup";
 
 const prisma = new PrismaClient();
 
@@ -79,14 +79,13 @@ app.get("/api/v1/bookingBasedOnCategory", async (req, res) => {
   }
 });
 
-app.use((req, res) => {
-  res.status(404).json({ message: "Not found" });
-});
+app.get('/',async(req,res)=>{
+  console.log("route hit")
+  res.json({message:"Welcome to Mahavirnagar Jain Sangh"})
+})
 
-app.get('/api/ping', (req, res) => res.send('pong'));
-
-// app.listen(3001, () => {
-//     console.log("Server is running on port 3001")
-// })
+app.listen(3001, () => {
+    console.log("Server is running on port 3001 hurray")
+})
 
 export default app;
