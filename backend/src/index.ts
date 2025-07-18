@@ -8,11 +8,11 @@ import "./cron/cleanup";
 const prisma = new PrismaClient();
 
 const app = express();
-app.use(express.json());
 const allowedOrigins = ["https://mahavirnagar-jain-sangh-fqxtkvpgj-bhavyashah19s-projects.vercel.app"];
 app.use(cors({
   origin:allowedOrigins
 }));
+app.use(express.json());
 
 app.post("/api/v1/booking", async (req, res) => {
   console.log("Booking came from real fe");
