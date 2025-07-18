@@ -47,9 +47,9 @@ export default function AyambilBookings() {
       <div className="w-full max-w-6xl bg-black/90 rounded-2xl shadow-xl p-6 md:p-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <h2 className="text-2xl md:text-4xl font-extrabold text-orange-400">Ayambil/Chauvihar Bookings - Today</h2>
-          <button className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-xl shadow transition text-lg">
+          {/* <button className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-xl shadow transition text-lg">
             + Add Booking
-          </button>
+          </button> */}
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-700 border-separate border-spacing-0">
