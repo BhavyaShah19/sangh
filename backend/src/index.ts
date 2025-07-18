@@ -8,18 +8,11 @@ import "./cron/cleanup";
 const prisma = new PrismaClient();
 
 const app = express();
-const allowedOrigins = ["https://mahavirnagar-jain-sangh-9mxyv2i0n-bhavyashah19s-projects.vercel.app/book"];
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
+  origin: 'https://mahavirnagar-jain-sangh.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
-
-app.options("*", cors());
 
 app.use(express.json());
 
