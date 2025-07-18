@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(cors());
 
 app.post('/api/v1/booking', async (req, res) => {
+    console.log("Booking came from real fe")
     const parsedBody = bookingDetailsSchema.safeParse(req.body.payload)
     if (!parsedBody.success) {
         res.status(400).json(parsedBody.error)
@@ -30,6 +31,7 @@ app.post('/api/v1/booking', async (req, res) => {
             message: "Booking Successfully Created",
             id: bookingDetails.id
         })
+        console.log("Booking came from real f2e")
     } catch (err) {
         res.status(500).json(err)
     }
