@@ -1,6 +1,5 @@
 'use client';
 import axios from 'axios';
-// import router from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FaUsers, FaCalendarAlt, FaCog } from 'react-icons/fa';

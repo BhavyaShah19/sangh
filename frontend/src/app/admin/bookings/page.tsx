@@ -4,14 +4,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-
-const BACKEND_URL = "http://localhost:3001"
-
-const statusStyles = {
-  Pending: 'bg-yellow-100 text-yellow-800',
-  Completed: 'bg-green-100 text-green-800',
-};
-
 type Booking = {
   name: string;
   phone: string;

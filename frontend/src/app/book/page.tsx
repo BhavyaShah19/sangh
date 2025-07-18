@@ -7,7 +7,7 @@ import axios from "axios";
 import { LoaderOne } from "@/components/ui/loader";
 import { ToastContainer, toast } from 'react-toastify';
 
-export default function book() {
+export default function Book() {
     const [name, setName] = useState("");
     const [category, setCategory] = useState("AYAMBIL");
     const [numberOfPeople, setNumberOfPeople] = useState("");
